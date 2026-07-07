@@ -20,7 +20,7 @@ The starting point of the series — core concepts every AI builder needs before
    - English: [4_tools.md](4_tools.md)
    - Turkish: [4_tools_tr.md](4_tools_tr.md)
 
-5. **Module 5: Memory (Short-Term Memory & Context)**
+5. **Module 5: Memory (Parametric, Working, and Long-Term)**
    - English: [5_memory.md](5_memory.md)
    - Turkish: [5_memory_tr.md](5_memory_tr.md)
 
