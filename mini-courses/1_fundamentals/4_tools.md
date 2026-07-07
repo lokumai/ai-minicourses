@@ -4,6 +4,9 @@ Hi! Modules 1, 2, and 3 covered LLMs, fine-tuning, and RAG. Now, let's make LLMs
 
 ## I. What is an LLM Tool?
 
+![LLM and Tools](./images/tools.jpg)
+*Tools are how an LLM reaches outside its own head — searching the web, doing math, running code — and reports back with an answer.*
+
 A **tool** is just a function that you write in code. It's a normal Python function with a name, inputs, and outputs. The LLM doesn't run it directly—instead, based on what the user asks, the LLM decides if it needs to call one of your tools and provides the right inputs.
 
 For example, you define a tool like `read_file(filename)`. The LLM sees the tool's description and, if the user says "Read the main.py file," the LLM calls it with `filename="main.py"`.

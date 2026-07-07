@@ -4,6 +4,9 @@ Merhaba! Modüller 1, 2 ve 3'te LLM'ler, fine-tuning ve RAG'ı öğrendik. Şimd
 
 ## I. LLM Tool Nedir?
 
+![LLM ve Tool'lar](./images/tools.jpg)
+*Tool'lar, bir LLM'nin kendi kafasının dışına çıkma yöntemidir—web'de arama yapmak, matematik yapmak, kod çalıştırmak—ve bir cevapla geri dönmek.*
+
 Bir **tool**, kodda yazdığın bir fonksiyon. Normal bir Python fonksiyonu, isim, girişler ve çıkışlar var. LLM onu doğrudan çalıştırmaz—kullanıcının ne dediğine göre, LLM hangi tool'u çağırması gerektiğini karar verir ve doğru girişleri sağlar.
 
 Örneğin, `read_file(filename)` gibi bir tool tanımlarsın. LLM tool'un açıklamasını görür ve kullanıcı "main.py dosyasını oku" derse, LLM onu `filename="main.py"` ile çağırır.
