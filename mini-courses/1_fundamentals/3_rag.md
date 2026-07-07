@@ -14,6 +14,9 @@ RAG stands for Retrieval-Augmented Generation. It helps with context window limi
 
 **How it works**: Convert text to vector embeddings (numbers) using encoder models. Store in vector DBs like ChromaDB, Milvus, Weaviate, Pinecone, FAISS. Query by converting your question to vectors, find similar ones (cosine similarity), get top results to LLM.
 
+![Naive RAG](./images/rag.png)
+*The basic ("naive") RAG flow: the query goes two places at once — through an embedding model to search the vector store index, and directly to the LLM alongside whatever context that search returns.*
+
 **Why cool?** RAG stops wrong answers and lets LLMs use real code facts.
 
 ASCII Art:
@@ -23,6 +26,8 @@ Find: [Look in Code] -> [Get Function X]
 Add: Question + Function X = Better Question
 Answer: LLM says the truth!
 ```
+
+**Not just code!** The same trick works for any text. Say you have a folder of legal contracts. Someone asks, "What's the termination notice period in the Acme vendor contract?" Instead of the LLM guessing from memory, RAG searches across all your contracts, finds the exact clause that answers the question, and hands just that clause to the LLM.
 
 ## II. Vector Embeddings: The Magic Numbers
 
@@ -43,6 +48,13 @@ Example:
 Code 1: "def add(a, b): return a + b" -> Numbers: [0.1, 0.8, ...]
 Code 2: "def sum(x, y): return x + y" -> Numbers: [0.1, 0.7, ...]
 Close numbers = Similar code!
+```
+
+This works for legal text too — embeddings capture *meaning*, not exact words:
+```
+Clause A: "The Vendor may terminate this Agreement upon 30 days written notice." -> Numbers: [0.2, 0.6, ...]
+Clause B: "Either party may end this Contract with a 30-day notice period." -> Numbers: [0.2, 0.55, ...]
+Close numbers = Same meaning, even though the wording is completely different!
 ```
 
 ## III. Storing Embeddings: Vector Databases
@@ -70,8 +82,8 @@ They search super fast using smart math.
 
 ### A. Setup (Indexing)
 
-1. Load your code files.
-2. Break into small chunks (like sentences or functions).
+1. Load your source data — code files, legal documents (contracts, policies), PDFs, or any text.
+2. Break into small chunks (like sentences, functions, or contract clauses).
 3. Turn chunks into fingerprints (embeddings).
 4. Store in a Vector DB.
 
@@ -117,6 +129,36 @@ results = collection.query(
     n_results=1
 )
 print(results['documents'])  # Gets the most similar code
+```
+
+The exact same code works for documents instead of code — here it is retrieving from a set of legal contracts:
+```python
+import chromadb
+client = chromadb.Client()
+collection = client.create_collection("legal_clauses")
+
+# Add clauses from a set of legal documents (two different contracts) with embeddings
+documents = [
+    "The Vendor may terminate this Agreement upon 30 days written notice.",
+    "Either party may end this Contract with a 30-day notice period.",
+    "This Agreement is governed by the laws of the State of Delaware.",
+]
+ids = ["contract_A_clause_12", "contract_B_clause_7", "contract_A_clause_20"]
+embeddings = [[0.2, 0.6, ...], [0.2, 0.55, ...], [0.9, 0.1, ...]]  # Example vectors
+
+collection.add(
+    documents=documents,
+    embeddings=embeddings,
+    ids=ids
+)
+
+# Ask: "What's the notice period to terminate the contract?"
+query_embedding = [0.2, 0.58, ...]  # Vector for the question
+results = collection.query(
+    query_embeddings=[query_embedding],
+    n_results=2
+)
+print(results['documents'])  # Returns the two termination-notice clauses, not the governing-law one
 ```
 
 For Haystack ([haystack.deepset.ai](https://haystack.deepset.ai/)):
@@ -173,7 +215,7 @@ distances, indices = index.search(query, 5)
 - Tutorial Maker: Find code parts to explain.
 - Chatbot: Get exact code for questions.
 
-**Usages and Use Cases**: RAG is great for Q&A on codebases, docs, or any large data. Libraries like Haystack and LlamaIndex have ready-to-use RAG with examples.
+**Usages and Use Cases**: RAG is great for Q&A on codebases, legal documents and contracts, policies, or any large text collection. Libraries like Haystack and LlamaIndex have ready-to-use RAG with examples.
 
 ## Mermaid Diagram: RAG in Action
 
@@ -190,6 +232,21 @@ graph TD
     G --> H[Add to Prompt: Question + Chunk 2]
     H --> I[LLM Thinks and Answers]
 ```
+
+The exact same flow works for legal documents: swap "code chunks" for "contract clauses," and the process is identical — convert the question to a vector, search across every contract you have, and hand the LLM only the matching clause instead of dumping every contract into its context.
+
+## VI. Why Not Just Fine-Tune the Model on These Documents Instead?
+
+You might be wondering: we already learned about fine-tuning in Module 2 — so why not just fine-tune the model directly on our legal documents or our codebase, instead of bothering with embeddings and vector databases?
+
+Here's why RAG usually wins for this kind of data:
+
+- **Some data changes constantly, or is live.** Your codebase gets new commits every day. Legal documents get amended, new contracts get signed, policies get updated. Fine-tuning takes hours or days and costs real money — you can't realistically retrain the model every time a file changes.
+- **The LLM is already trained on billions of documents.** During pre-training, the model already saw an enormous amount of text. If you fine-tune it on, say, a 100-page legal contract, that document gets mixed in among everything else the model has ever learned — it's easy for a fine-tuned model to misremember or blend details from your document with something else it saw during pre-training, because your 100 pages are a tiny drop in an ocean of parameters.
+- **RAG updates are cheap; fine-tuning updates are not.** When your documents or codebase change, RAG only needs to re-embed and re-index the changed parts — a fast, cheap operation. Fine-tuning again means another expensive training run.
+- **RAG puts the answer directly in front of the model.** With RAG, the exact relevant clause or function is placed directly into the LLM's context window for that specific question — the model doesn't have to recall it from among the billions of documents baked into its weights. It just reads it, right there in front of it, like an open book, instead of trying to remember something it half-learned during training.
+
+In short: **fine-tuning changes what the model *knows* (baked into its weights); RAG changes what the model *sees* (fed into its context, at the moment you ask).** For fast-changing or huge document sets like codebases and legal archives, RAG is almost always the cheaper and more reliable choice.
 
 ## Tutorial Progress
 
@@ -208,9 +265,9 @@ graph LR
 
 ## Summary
 
-RAG boosts LLMs with your code knowledge. You now know embeddings, DBs, and the steps. Try ChromaDB for practice!
+RAG boosts LLMs with your code and document knowledge. You now know embeddings, DBs, and the steps. Try ChromaDB for practice!
 
-**Quick Check**: Name the 3 RAG steps. Why are embeddings useful?
+**Quick Check**: Name the 3 RAG steps. Why are embeddings useful? Why is updating RAG usually cheaper than fine-tuning?
 
 Keep going! 🚀
 
