@@ -1,6 +1,6 @@
 # Module 1: Large Language Model (LLM) Fundamentals
 
-Welcome to the first module of our AI tutorial series! As your expert tutor, I'll guide you through the basics of Large Language Models (LLMs) in a clear, step-by-step way. We'll use simple examples, visuals, and diagrams to make learning fun and easy. Remember, LLMs are powerful tools, but understanding them helps you use them wisely.
+Welcome to the first module of our AI mini-courses series! I'll guide you through the basics of Large Language Models (LLMs) in a clear, step-by-step way. We'll use simple examples, visuals, and diagrams to make learning fun and easy. Remember, LLMs are powerful tools, but understanding them helps you use them wisely.
 
 ## I. Introduction to Large Language Models (LLMs)
 
@@ -25,20 +25,12 @@ Output: "blue."
 LLMs have settings to control output:
 
 - **Temperature**: 0.0 to 1.0. Low (0.1-0.3) for accurate, consistent answers (good for code). High (0.9) for creative but risky.
-
 - **Max Output Tokens**: Limits response length to save costs.
-
 - **Context Window**: Max text (input + output) per call. Exceeded? Truncation or errors.
 
 ### C. Context Window Limitations
 
 The context window is a big limit. It prevents processing huge codebases. That's why RAG helps—pulls in extra info.
-
-ASCII Art for Context Window:
-```
-Context Window: [Input Text] + [Output Text] <= Limit
-If too much: [Input Text] ... [Truncated!]
-```
 
 ## II. Controlling Output and Understanding Constraints
 
@@ -51,21 +43,18 @@ Every LLM has a **context window**—the maximum amount of text (input + output)
 - **Why it matters**: If your project involves big codebases or long documents, the context window can get full quickly. That's why techniques like RAG (Retrieval-Augmented Generation) exist—to pull in extra info without overloading the model.
 - **What happens if exceeded**: The model might cut off your input (truncation) or give incomplete answers.
 
-ASCII Art for Context Window:
-```
-Context Window: [Input Text] + [Output Text] <= Limit
-If too much: [Input Text] ... [Truncated!]
-```
+![LLM Context Window](./images/context-window.png)
 
 ### B. Key Generation Parameters
 
 You can tweak settings to change how the LLM responds. Here are the main ones:
 
 1. **Temperature**:
+
    - **Definition**: A number from 0.0 to 1.0 that controls creativity. Low (e.g., 0.1) means predictable, accurate answers. High (e.g., 0.9) means more creative but less reliable.
    - **For your projects**: Use low temperatures (0.1–0.3) for tasks like code analysis or tutorials, where you need consistency over fun stories.
-
 2. **Max Output Tokens**:
+
    - **Definition**: The maximum length of the LLM's reply.
    - **Control**: Set this to save money on API calls and avoid super-long responses. For example, limit to 100 tokens for quick answers.
 
@@ -76,11 +65,12 @@ Now, how do you actually use an LLM? Inference needs GPU for larger models, so c
 ### A. Inference Execution Methods
 
 1. **Cloud-Based Inference (API Calls)**:
+
    - Run LLMs through online services like ChatGPT or Google AI Studio.
    - **Pros**: Access to huge, powerful models. No need for fancy hardware.
    - **Cons**: Costs money, needs internet, might be slow.
-
 2. **Local Inference**:
+
    - Run the LLM right on your computer.
    - **Requirement**: A good GPU (graphics card) with enough memory (VRAM).
    - **Benefit**: Free after setup, works offline.
@@ -134,11 +124,13 @@ If you have a capable laptop (good GPU), run LLMs locally for zero cost after se
 Prompt engineering is the art of crafting good prompts to get better LLM responses. It's like giving clear instructions to a student.
 
 **Key Tips**:
+
 - Be specific: Instead of "Write code," say "Write a Python function to add two numbers."
 - Use examples: Show what you want, e.g., "Example: Input 2+3, Output 5."
 - Experiment: Try different phrasings.
 
 For inspiration, check these resources:
+
 - [System Prompts and Models](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
 - [System Prompts Leaks](https://github.com/asgeirtj/system_prompts_leaks)
 - [Leaked System Prompts](https://github.com/jujumilk3/leaked-system-prompts)
