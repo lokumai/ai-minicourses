@@ -40,6 +40,8 @@ LLMs are amazing, but they have limits. Let's learn how to control them.
 
 Every LLM has a **context window**—the maximum amount of text (input + output) it can handle in one go. It's like the model's memory limit.
 
+Think of it like the chat history between you and ChatGPT. At the very start of a new conversation, it's completely empty. As you talk back and forth, that history — your (human) messages and the AI's replies — keeps getting added to the context window, until eventually it fills up.
+
 - **Why it matters**: If your project involves big codebases or long documents, the context window can get full quickly. That's why techniques like RAG (Retrieval-Augmented Generation) exist—to pull in extra info without overloading the model.
 - **What happens if exceeded**: The model might cut off your input (truncation) or give incomplete answers.
 

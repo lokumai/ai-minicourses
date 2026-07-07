@@ -45,6 +45,8 @@ LLM'ler harika, ama sınırları var. Onları nasıl kontrol edeceğimizi öğre
 
 Her LLM'nin bir **context window**u var—bir seferde işleyebileceği maksimum metin miktarı. Modelin hafıza limiti gibi.
 
+Bunu, seninle ChatGPT arasındaki sohbet geçmişi gibi düşün. Yeni bir konuşmanın en başında tamamen boştur. Konuştukça, bu geçmiş—senin (insan) mesajların ve AI'nin yanıtları—context window'a eklenmeye devam eder, ta ki sonunda dolana kadar.
+
 - **Neden önemli**: Projenizde büyük kod tabanları veya uzun belgeler varsa, context window çabuk dolar. Bu yüzden RAG gibi teknikler var—modeli aşırı yüklemeden ekstra bilgi çeker.
 - **Aşıldığında ne olur**: Model girişinizi kesebilir (truncation) veya eksik yanıtlar verebilir.
 
