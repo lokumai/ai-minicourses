@@ -26,3 +26,24 @@ A series of mini-courses from beginner to advanced to help you learn practical t
 🎉 Congrats! You are now an **AI engineer**. You can now build your own AI agents and systems.
 
 1. ⚜️ [ADVANCED] ⚜️ If you want to become a rare, highly-skilled AI engineer, take the [Expert](3_expert/README.md) course to learn advanced topics.
+
+## Local Development
+
+The courses are plain markdown, published as a website with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/). To preview the site locally:
+
+```bash
+# one-time setup
+python3 -m venv .venv
+.venv/bin/pip install mkdocs-material
+
+# run the local server
+.venv/bin/mkdocs serve
+```
+
+Then open http://127.0.0.1:8000 — the site live-reloads whenever you save a markdown file.
+
+Before opening a PR, make sure the strict build passes (broken links fail CI):
+
+```bash
+.venv/bin/mkdocs build --strict
+```
