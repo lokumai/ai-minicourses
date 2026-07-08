@@ -31,5 +31,5 @@ graph LR
     style A fill:#FFFF00
 ```
 
-**Previous Module:** [Intermediate — Module 14: Personal Agents](../intermediate/14_personal_agents.md)
+**Previous Module:** [Intermediate — Module 14: Personal Agents](../2_intermediate/14_personal_agents.md)
 **Next Module:** [Module 16: Advanced Architectures](16_advanced_architectures.md)

@@ -2,6 +2,8 @@
 
 AI Engineering made simple, short, and useful.
 
+📖 **Read online:** [lokumai.github.io/ai-minicourses](https://lokumai.github.io/ai-minicourses/)
+
 A series of mini-courses from beginner to advanced to help you learn practical topics in modern AI engineering. Each course is short, easy to understand, and includes real-world examples, clear visuals, and extra reading materials. It is the fastest way to master what you actually need on the job.
 
 ## Structure
@@ -17,10 +19,31 @@ A series of mini-courses from beginner to advanced to help you learn practical t
 
 ### How to Use
 
-1. Start with [Fundamentals](1_fundamentals/README.md) to learn must-know concepts in AI Engineering.
-2. Move on to [Intermediate](2_intermediate/README.md) to build your core skills.
-3. Jump to [Ecosystem](4_ecosystem/README.md) to learn the tools and frameworks needed to become a well-rounded AI engineer.
+1. Start with [Fundamentals](mini-courses/1_fundamentals/README.md) to learn must-know concepts in AI Engineering.
+2. Move on to [Intermediate](mini-courses/2_intermediate/README.md) to build your core skills.
+3. Jump to [Ecosystem](mini-courses/4_ecosystem/README.md) to learn the tools and frameworks needed to become a well-rounded AI engineer.
 
 🎉 Congrats! You are now an **AI engineer**. You can now build your own AI agents and systems.
 
-1. ⚜️ [ADVANCED] ⚜️ If you want to become a rare, highly-skilled AI engineer, take the [Expert](3_expert/README.md) course to learn advanced topics.
+1. ⚜️ [ADVANCED] ⚜️ If you want to become a rare, highly-skilled AI engineer, take the [Expert](mini-courses/3_expert/README.md) course to learn advanced topics.
+
+## Local Development
+
+The courses are plain markdown, published as a website with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/). To preview the site locally:
+
+```bash
+# one-time setup
+python3 -m venv .venv
+.venv/bin/pip install mkdocs-material
+
+# run the local server
+.venv/bin/mkdocs serve
+```
+
+Then open http://127.0.0.1:8000 — the site live-reloads whenever you save a markdown file.
+
+Before opening a PR, make sure the strict build passes (broken links fail CI):
+
+```bash
+.venv/bin/mkdocs build --strict
+```
