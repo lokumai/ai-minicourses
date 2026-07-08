@@ -1,0 +1,91 @@
+site_name: AI Mini-Courses
+site_description: AI Engineering made simple, short, and useful.
+site_url: https://lokumai.github.io/ai-minicourses/
+repo_url: https://github.com/lokumai/ai-minicourses
+repo_name: lokumai/ai-minicourses
+
+docs_dir: mini-courses
+
+exclude_docs: |
+  scratchpad/
+
+not_in_nav: |
+  *_tr.md
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.footer
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Fundamentals:
+      - Overview: 1_fundamentals/README.md
+      - "1. LLM Fundamentals": 1_fundamentals/1_llms.md
+      - "2. Training LLMs": 1_fundamentals/2_training.md
+      - "3. RAG & Embeddings": 1_fundamentals/3_rag.md
+      - "4. Tool Calling": 1_fundamentals/4_tools.md
+      - "5. Memory": 1_fundamentals/5_memory.md
+      - "6. AI Agents": 1_fundamentals/6_agents.md
+      - "7. Multi-Agent Systems": 1_fundamentals/7_multi_agent.md
+  - "🚧 Intermediate (Draft)":
+      - Overview: 2_intermediate/README.md
+      - "8. Prompt Engineering": 2_intermediate/8_prompt_engineering.md
+      - "9. Context Engineering": 2_intermediate/9_context_engineering.md
+      - "10. Coding Agents": 2_intermediate/10_coding_agents.md
+      - "11. Harness Engineering": 2_intermediate/11_harness_engineering.md
+      - "12. Security": 2_intermediate/12_security.md
+      - "13. Loop Engineering": 2_intermediate/13_loop_engineering.md
+      - "14. Personal Agents": 2_intermediate/14_personal_agents.md
+  - "🚧 Expert (Draft)":
+      - Overview: 3_expert/README.md
+      - "15. Advanced UI": 3_expert/15_advanced_ui.md
+      - "16. Advanced Architectures": 3_expert/16_advanced_architectures.md
+      - "17. Advanced Tools": 3_expert/17_advanced_tools.md
+      - "18. Advanced Memory": 3_expert/18_advanced_memory.md
+      - "19. Advanced Multi-Agent": 3_expert/19_advanced_multiagent.md
+      - "20. Advanced Prompting": 3_expert/20_advanced_prompting.md
+      - "21. Advanced Context Engineering": 3_expert/21_advanced_context_engineering.md
+      - "22. Advanced Harness Engineering": 3_expert/22_advanced_harness_engineering.md
+      - "23. Advanced Deployment": 3_expert/23_advanced_deployment.md
+  - "🚧 Ecosystem (Draft)":
+      - Overview: 4_ecosystem/README.md
+      - "24. Agent Frameworks": 4_ecosystem/24_agent_frameworks.md
+      - "25. Inference Providers": 4_ecosystem/25_inference_providers.md
+      - "26. Inference Engines": 4_ecosystem/26_inference_engines.md
+      - "27. UI Design": 4_ecosystem/27_ui_design.md
+      - "28. Observability": 4_ecosystem/28_observability.md
+  - "🚧 Protocols & Specs (Draft)":
+      - Overview: 5_protocols_specs/README.md
+      - "29. Protocols Reference": 5_protocols_specs/29_protocols_reference.md
+  - "🚧 Optional (Draft)":
+      - Overview: 6_optional/README.md
+      - "30. Human in the Loop": 6_optional/30_human_in_the_loop.md
+      - "31. Runtime": 6_optional/31_runtime.md
