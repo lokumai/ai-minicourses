@@ -19,13 +19,13 @@ A series of mini-courses from beginner to advanced to help you learn practical t
 
 ### How to Use
 
-1. Start with [Fundamentals](1_fundamentals/README.md) to learn must-know concepts in AI Engineering.
-2. Move on to [Intermediate](2_intermediate/README.md) to build your core skills.
-3. Jump to [Ecosystem](4_ecosystem/README.md) to learn the tools and frameworks needed to become a well-rounded AI engineer.
+1. Start with [Fundamentals](mini-courses/1_fundamentals/README.md) to learn must-know concepts in AI Engineering.
+2. Move on to [Intermediate](mini-courses/2_intermediate/README.md) to build your core skills.
+3. Jump to [Ecosystem](mini-courses/4_ecosystem/README.md) to learn the tools and frameworks needed to become a well-rounded AI engineer.
 
 🎉 Congrats! You are now an **AI engineer**. You can now build your own AI agents and systems.
 
-1. ⚜️ [ADVANCED] ⚜️ If you want to become a rare, highly-skilled AI engineer, take the [Expert](3_expert/README.md) course to learn advanced topics.
+1. ⚜️ [ADVANCED] ⚜️ If you want to become a rare, highly-skilled AI engineer, take the [Expert](mini-courses/3_expert/README.md) course to learn advanced topics.
 
 ## Local Development
 
