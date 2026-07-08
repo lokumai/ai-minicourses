@@ -26,5 +26,5 @@ graph LR
     style A fill:#FFFF00
 ```
 
-**Önceki Modül:** [Expert — Modül 23: İleri Seviye Deployment](../expert/23_advanced_deployment_tr.md)
+**Önceki Modül:** [Expert — Modül 23: İleri Seviye Deployment](../3_expert/23_advanced_deployment_tr.md)
 **Sonraki Modül:** [Modül 25: Inference Sağlayıcıları](25_inference_providers_tr.md)

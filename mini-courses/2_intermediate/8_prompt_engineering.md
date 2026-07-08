@@ -24,5 +24,5 @@ graph LR
     style A fill:#FFFF00
 ```
 
-**Previous Module:** [Fundamentals — Module 7: Multi-Agent Architectures](../fundamentals/7_multi_agent.md)
+**Previous Module:** [Fundamentals — Module 7: Multi-Agent Architectures](../1_fundamentals/7_multi_agent.md)
 **Next Module:** [Module 9: Context Engineering](9_context_engineering.md)

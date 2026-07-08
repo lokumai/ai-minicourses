@@ -162,4 +162,4 @@ Tebrikler! 🎉
 
 **Önceki Modül:** [Modül 6: AI Agents: Tek Çağrıdan Çok Adımlı Akıl Yürütmeye](6_agents_tr.md)
 
-**Sonraki Kategori:** [Intermediate →](../intermediate/8_prompt_engineering_tr.md)
+**Sonraki Kategori:** [Intermediate →](../2_intermediate/8_prompt_engineering_tr.md)

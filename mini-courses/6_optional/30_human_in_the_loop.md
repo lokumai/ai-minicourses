@@ -18,5 +18,5 @@ graph LR
     style A fill:#FFFF00
 ```
 
-**Previous Module:** [Protocols & Specs — Module 29: Protocols Reference](../protocols_specs/29_protocols_reference.md)
+**Previous Module:** [Protocols & Specs — Module 29: Protocols Reference](../5_protocols_specs/29_protocols_reference.md)
 **Next Module:** [Module 31: Runtime](31_runtime.md)

@@ -34,4 +34,4 @@ The starting point of the series — core concepts every AI builder needs before
 
 Start with Module 1 and progress through the series!
 
-[← Back to overview](../README.md)
+[← Back to overview](../index.md)

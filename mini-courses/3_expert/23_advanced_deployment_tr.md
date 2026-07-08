@@ -34,4 +34,4 @@ graph LR
 ```
 
 **Önceki Modül:** [Modül 22: İleri Seviye Harness Engineering](22_advanced_harness_engineering_tr.md)
-**Sonraki Modül:** [Ecosystem — Modül 24: Agent Framework'leri](../ecosystem/24_agent_frameworks_tr.md)
+**Sonraki Modül:** [Ecosystem — Modül 24: Agent Framework'leri](../4_ecosystem/24_agent_frameworks_tr.md)

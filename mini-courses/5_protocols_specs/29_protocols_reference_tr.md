@@ -20,5 +20,5 @@ graph LR
     style A fill:#FFFF00
 ```
 
-**Önceki Modül:** [Ecosystem — Modül 28: Observability (Gözlemlenebilirlik)](../ecosystem/28_observability_tr.md)
-**Sonraki Modül:** [Optional — Modül 30: Human-in-the-Loop](../optional/30_human_in_the_loop_tr.md)
+**Önceki Modül:** [Ecosystem — Modül 28: Observability (Gözlemlenebilirlik)](../4_ecosystem/28_observability_tr.md)
+**Sonraki Modül:** [Optional — Modül 30: Human-in-the-Loop](../6_optional/30_human_in_the_loop_tr.md)

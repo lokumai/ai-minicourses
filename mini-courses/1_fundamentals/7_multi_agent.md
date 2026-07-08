@@ -162,4 +162,4 @@ Congratulations! 🎉
 
 **Previous Module:** [Module 6: AI Agents: From Single Call to Multi-Step Reasoning](6_agents.md)
 
-**Next Category:** [Intermediate →](../intermediate/8_prompt_engineering.md)
+**Next Category:** [Intermediate →](../2_intermediate/8_prompt_engineering.md)
