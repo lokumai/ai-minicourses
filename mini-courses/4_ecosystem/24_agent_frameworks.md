@@ -26,5 +26,5 @@ graph LR
     style A fill:#FFFF00
 ```
 
-**Previous Module:** [Expert — Module 23: Advanced Deployment](../expert/23_advanced_deployment.md)
+**Previous Module:** [Expert — Module 23: Advanced Deployment](../3_expert/23_advanced_deployment.md)
 **Next Module:** [Module 25: Inference Providers](25_inference_providers.md)

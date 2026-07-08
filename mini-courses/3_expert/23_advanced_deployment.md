@@ -34,4 +34,4 @@ graph LR
 ```
 
 **Previous Module:** [Module 22: Advanced Harness Engineering](22_advanced_harness_engineering.md)
-**Next Module:** [Ecosystem — Module 24: Agent Frameworks](../ecosystem/24_agent_frameworks.md)
+**Next Module:** [Ecosystem — Module 24: Agent Frameworks](../4_ecosystem/24_agent_frameworks.md)

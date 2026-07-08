@@ -27,4 +27,4 @@ graph LR
 ```
 
 **Önceki Modül:** [Modül 27: UI Tasarımı](27_ui_design_tr.md)
-**Sonraki Modül:** [Protocols & Specs — Modül 29: Protokol Referansı](../protocols_specs/29_protocols_reference_tr.md)
+**Sonraki Modül:** [Protocols & Specs — Modül 29: Protokol Referansı](../5_protocols_specs/29_protocols_reference_tr.md)

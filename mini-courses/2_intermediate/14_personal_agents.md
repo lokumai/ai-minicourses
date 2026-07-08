@@ -31,4 +31,4 @@ graph LR
 ```
 
 **Previous Module:** [Module 13: Loop Engineering](13_loop_engineering.md)
-**Next Module:** [Expert — Module 15: Advanced UI](../expert/15_advanced_ui.md)
+**Next Module:** [Expert — Module 15: Advanced UI](../3_expert/15_advanced_ui.md)

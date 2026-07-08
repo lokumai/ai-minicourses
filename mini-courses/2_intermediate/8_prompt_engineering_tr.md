@@ -24,5 +24,5 @@ graph LR
     style A fill:#FFFF00
 ```
 
-**Önceki Modül:** [Fundamentals — Modül 7: Multi-Agent Architectures](../fundamentals/7_multi_agent_tr.md)
+**Önceki Modül:** [Fundamentals — Modül 7: Multi-Agent Architectures](../1_fundamentals/7_multi_agent_tr.md)
 **Sonraki Modül:** [Modül 9: Context Engineering](9_context_engineering_tr.md)

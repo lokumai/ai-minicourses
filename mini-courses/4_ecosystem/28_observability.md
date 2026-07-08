@@ -27,4 +27,4 @@ graph LR
 ```
 
 **Previous Module:** [Module 27: UI Design](27_ui_design.md)
-**Next Module:** [Protocols & Specs — Module 29: Protocols Reference](../protocols_specs/29_protocols_reference.md)
+**Next Module:** [Protocols & Specs — Module 29: Protocols Reference](../5_protocols_specs/29_protocols_reference.md)
