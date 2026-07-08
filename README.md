@@ -2,6 +2,8 @@
 
 AI Engineering made simple, short, and useful.
 
+📖 **Read online:** [lokumai.github.io/ai-minicourses](https://lokumai.github.io/ai-minicourses/)
+
 A series of mini-courses from beginner to advanced to help you learn practical topics in modern AI engineering. Each course is short, easy to understand, and includes real-world examples, clear visuals, and extra reading materials. It is the fastest way to master what you actually need on the job.
 
 ## Structure
