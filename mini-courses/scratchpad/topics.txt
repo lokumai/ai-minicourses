@@ -22,7 +22,7 @@
 === Expert ===
 15) advanced_ui (agentic UI, generative UI, event streaming, AG-UI, MCP-Apps UI, A2UI, Copilotkit, Agent Client Protocol ACP)
 16) advanced_architectures (THREAD, ReAct, CodeAct, RLM, Dynamic Workflows)
-17) advanced_tools(RAG vs Agentic Search, JSON vs CLI tools, Frotend Tools, Code Mode)
+17) advanced_tools(RAG vs Agentic Search, JSON vs CLI tools, Frotend Tools, Code Mode, Tool Chaining)
 18) advanced_memory(Long-term memory using Cognee and MemSearch and Hindsight, Agent Dreaming, Agent KnowledgeBase, Entire Provenance)
 19) advanced_multiagent (A2A, Multi-agent coordination context delegation vs subagent context delegation vs messaging pool)
 20) advanced_prompting (Reflextion, Tree of Thought, LLM Consul, caveman, ponytail)
@@ -43,5 +43,3 @@
 === Optional ===
 Human-in-the-Lopp (Interrupt, Steering)
 Runtime (Checkpoints, Fault Tolerance, Time Travel)
-
-
